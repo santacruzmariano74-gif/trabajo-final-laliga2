@@ -1,0 +1,46 @@
+---
+title: "Análisis de estadísticas de jugadores de LaLiga 2 (2026-27)"
+author:
+  - name: "Mariano Santa Cruz Hernandez"
+  - name: "Teo Puig"
+  - name: "Pol Varela"
+date: "2026-11-10"
+lang: es
+format:
+  html:
+    toc: true
+    toc-title: "Índice"
+    number-sections: true
+    code-fold: true
+    embed-resources: true
+execute:
+  warning: false
+  message: false
+---
+
+# Introducción
+
+## Contexto y objetivo
+
+LaLiga Hypermotion (Segunda División) es una competición con mucha rotación de jugadores y plantillas muy distintas entre equipos, y sus estadísticas individuales se analizan mucho menos que las de Primera División. El objetivo de este trabajo es importar, transformar, explorar, visualizar, analizar e interpretar un conjunto de datos abiertos con estadísticas de los jugadores de LaLiga 2 en la temporada 2026-27, para describir cómo se distribuyen por posición, equipo y nacionalidad, y para identificar qué jugadores y equipos destacan en las variables más relevantes.
+
+Al tratarse de una temporada todavía en curso, los datos son parciales, y los resultados deben interpretarse como una fotografía del momento en que se obtuvieron.
+
+## Uso de chatbot
+
+Hemos utilizado el chatbot Claude (Anthropic) como apoyo durante el trabajo, para:
+
+- orientarnos en la estructura del documento y en los requisitos del trabajo;
+- configurar el proyecto de Quarto en RStudio y resolver errores al renderizar;
+- obtener ejemplos de código para importar, explorar y transformar los datos;
+- revisar la redacción de algunos apartados.
+
+El chatbot no ha sustituido nuestro análisis: las decisiones sobre el tema, los datos, la limpieza y la interpretación de los resultados son nuestras, y hemos revisado y comprendido todo el código incluido en el documento.
+
+# Obtención de datos
+
+Los datos proceden del dataset *laliga2-players-stats-2026-2027*, publicado en Kaggle por el usuario *unaidelamata* y elaborado a partir de [calculafutbol.com](https://calculafutbol.com/). Contiene estadísticas de 569 jugadores de LaLiga 2 en 52 variables.
+
+- **Enlace:** <https://www.kaggle.com/datasets/unaidelamata/laliga2-players-stats-2026-2027>
+- **Fecha de acceso:** 10 de noviembre de 2026
+- **Licencia:** uso libre para investigación, analítica deportiva y proyectos de aprendizaje automático no comerciales, citando la fuente. Este trabajo es de carácter académico y no comercial.
